@@ -3,11 +3,15 @@ import { defineConfig, defineConfigWithTheme } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Awesome Project",
+	base: '/~wangxi/',
   lang: 'zh-CN',
   description: "A VitePress Site",
   srcDir: 'src',
 	lastUpdated: true, // 显示上一次更新时间
 	head: [['link', { rel: 'icon', href: '/img/favicon.ico' }]],
+	markdown:{
+    lineNumbers:true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
