@@ -25,11 +25,10 @@ aside: false
 <details>
 <summary>展开查看</summary>
 
-```js
-import { ref } from 'vue'
-```
-
+::: code-group
 <<< ./demo/index.vue
+<<< ./demo/constant.js
+:::
 </details>
 
 <script setup>

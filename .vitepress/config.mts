@@ -1,14 +1,15 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
 
+const Base = '/~wangxi/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "My Awesome Project",
-	base: '/~wangxi/',
+	base: Base,
   lang: 'zh-CN',
   description: "A VitePress Site",
   srcDir: 'src',
 	lastUpdated: true, // 显示上一次更新时间
-	head: [['link', { rel: 'icon', href: '/img/favicon.ico' }]],
+	head: [['link', { rel: 'icon', href: `${Base}img/logo.png` }]],
 	markdown:{
     lineNumbers:true
   },
@@ -18,6 +19,11 @@ export default defineConfig({
       // { text: 'Home', link: '/' },
       { text: '库', link: '/repository', activeMatch: 'repository' },
       { text: '个人推荐', link: '/recommend/video/movie', activeMatch: 'recommend', },
+			{ text: '前端', activeMatch: 'frontend', items: [
+				{text: 'vue', link: '/frontend/vue'}
+			]},
+      { text: 'Q&A', link: '/q&a/html', activeMatch: 'q&a', },
+			{ text: '其他', link: '/other/career', activeMatch: 'other/' }
     ],
 		sidebar: {
 			'/recommend/': [
@@ -37,6 +43,21 @@ export default defineConfig({
 						{ text: '动漫', link: '/recommend/video/anime/' },
 					]
 				},
+			],
+			'/frontend/': [
+
+			],
+			'/q&a/': [
+				{ text: 'HTML', link: '/q&a/html/' },
+				{ text: 'CSS', link: '/q&a/css/' },
+				{ text: 'JS', link: '/q&a/js/' },
+				{ text: '浏览器原理', link: '/q&a/chrome/' },
+				{ text: '性能优化', link: '/q&a/performance/' },
+				{ text: '计算机网络', link: '/q&a/network/' },
+			],
+			'/other/': [
+				{ text: '职业', link: '/other/career/' },
+
 			]
 		},
 		search: {
@@ -49,6 +70,9 @@ export default defineConfig({
 		docFooter: {
 			prev: '上一篇',
 			next: '下一篇',
+		},
+		lastUpdated: {
+			text: '更新时间',
 		},
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

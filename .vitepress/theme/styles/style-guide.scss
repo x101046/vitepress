@@ -1,0 +1,38 @@
+/* .VPSidebarItem.level-1.is-active > .item .link > .text {
+	font-weight: 600;
+} */
+.VPSidebarItem.level-0.is-active > .item .link > .text,
+.VPSidebarItem.level-1.is-active > .item .link > .text,
+.VPSidebarItem.level-2.is-active > .item .link > .text,
+.VPSidebarItem.level-3.is-active > .item .link > .text,
+.VPSidebarItem.level-4.is-active > .item .link > .text,
+.VPSidebarItem.level-5.is-active > .item .link > .text {
+	font-weight: 600;	
+}
+.outline-link:hover,
+.outline-link.active {
+	font-weight: 600;	
+}
+.vp-doc {
+	h2 {
+		font-size: 28px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 20px;
+		margin-top: 24px;
+	}
+	p {
+		line-height: 24px;
+		margin: 24px 0;
+	}
+	strong {
+		font-weight: 700;
+		color: #262626
+	}
+	li+li {
+		margin-top: 4px;
+	}
+}

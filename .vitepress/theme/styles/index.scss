@@ -43,10 +43,11 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- @import "./style-guide.css";
+ @import "./style-guide.scss";
 
  :root {
 	--vp-c-indigo-1: #42b883;
+	// --vp-c-text-1: #262626
 	--vp-c-text-2: rgba(60, 60, 60, 0.7);
  }
 
