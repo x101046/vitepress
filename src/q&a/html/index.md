@@ -164,8 +164,6 @@ Canvas 元素允许在网页上使用 JavaScript 绘制图形和动画。以下�
 
 ### 语义化标签
 
-<br>
-
 #### 表示结构的标签
 
 `<header>` `<nav>` `<main>` `<article>` `<section>` `<aside>` `<footer>`
@@ -193,12 +191,12 @@ Canvas 元素允许在网页上使用 JavaScript 绘制图形和动画。以下�
 
 ### 嵌入内容
 
-`<video>`：视频播放。<br>
-`<audio>`：音频播放。<br>
+`<video>`：视频播放。  
+`<audio>`：音频播放。  
 `<canvas>`：通过 JavaScript 和 HTML 的 `<canvas>` 元素来绘制图形。
 
 ## 18.H5 是什么
 
-简单粗暴：就是一种移动端页面<br>
-深入点：微信上的一种移动营销页面<br>
+简单粗暴：就是一种移动端页面  
+深入点：微信上的一种移动营销页面  
 总之不是 HTML5

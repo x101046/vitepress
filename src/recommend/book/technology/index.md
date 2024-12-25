@@ -27,7 +27,6 @@ aside: false
 
 ::: code-group
 <<< ./demo/index.vue
-<<< ./demo/constant.js
 :::
 </details>
 

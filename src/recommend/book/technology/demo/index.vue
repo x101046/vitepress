@@ -162,7 +162,7 @@
             >
               <animateMotion
                 path="M583.2843,603.092286 C598.2224,599.093834 607.090738,583.742725 603.092286,568.804625 L568.5,440"
-                :begin="10 * item + 'ms'"
+                :begin="20 * item + 'ms'"
                 dur="3s"
                 repeatCount="indefinite"
                 rotate="auto"

@@ -1,8 +1,35 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
 
+const fileAndStyles: Record<string, string> = {}
 const Base = '/~wangxi/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+	vite: {
+    ssr: {
+      noExternal: ['naive-ui', 'date-fns', 'vueuc']
+    }
+  },
+	postRender(context) {
+    const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/
+    const vitepressPathRegex = /<vitepress-path>(.+)<\/vitepress-path>/
+    const style = styleRegex.exec(context.content)?.[1]
+    const vitepressPath = vitepressPathRegex.exec(context.content)?.[1]
+    if (vitepressPath && style) {
+      fileAndStyles[vitepressPath] = style
+    }
+    context.content = context.content.replace(styleRegex, '')
+    context.content = context.content.replace(vitepressPathRegex, '')
+  },
+  transformHtml(code, id) {
+    const html = id.split('/').pop()
+    if (!html)
+      return
+    const style = fileAndStyles[`/${html}`]
+    if (style) {
+      return code.replace(/<\/head>/, `${style}</head>`)
+    }
+  },
+	
   title: "My Awesome Project",
 	base: Base,
   lang: 'zh-CN',
@@ -20,10 +47,14 @@ export default defineConfig({
       { text: '库', link: '/repository', activeMatch: 'repository' },
       { text: '个人推荐', link: '/recommend/video/movie', activeMatch: 'recommend', },
 			{ text: '前端', activeMatch: 'frontend', items: [
-				{text: 'vue', link: '/frontend/vue'}
+				{ text: 'vue', link: '/frontend/vue' },
+				{ text: '算法', link: '/frontend/algo' }
 			]},
       { text: 'Q&A', link: '/q&a/html', activeMatch: 'q&a', },
-			{ text: '其他', link: '/other/career', activeMatch: 'other/' }
+			{ text: '其他', activeMatch: 'other', items: [
+				{ text: '游戏', link: '/other/game/魔兽/' },
+			]},
+			// { text: '其他', link: '/other/career', activeMatch: 'other/' }
     ],
 		sidebar: {
 			'/recommend/': [
@@ -56,8 +87,7 @@ export default defineConfig({
 				{ text: '计算机网络', link: '/q&a/network/' },
 			],
 			'/other/': [
-				{ text: '职业', link: '/other/career/' },
-
+				{ text: '魔兽', link: '/other/game/魔兽/' },
 			]
 		},
 		search: {

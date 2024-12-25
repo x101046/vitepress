@@ -23,7 +23,7 @@
 **（4）进程之间的内容相互隔离。** 进程隔离就是为了使操作系统中的进程互不干扰，每一个进程只能访问自己占有的数据，也就避免出现进程 A 写入数据到进程 B 的情况。正是因为进程之间的数据是严格隔离的，所以一个进程如果崩溃了，或者挂起了，是不会影响到其他进程的。如果进程之间需要进行数据的通信，这时候，就需要使用用于进程间通信的机制了。
 
 **Chrome浏览器的架构图：**
-![standard-box](./img/chrome1.png)
+![block2-1](./img/block2-1.png)
 从图中可以看出，最新的 Chrome 浏览器包括：
 
 - 1 个浏览器主进程
@@ -56,7 +56,7 @@
 
 ### 3. 浏览器渲染进程的线程有哪些
 浏览器的渲染进程的线程总共有五种：
-![standard-box](./img/chrome2.png)
+![block2-2](./img/block2-2.png)
 **（1）GUI渲染线程**
 
 负责渲染浏览器页面，解析HTML、CSS，构建DOM树、构建CSSOM树、构建渲染树和绘制页面；当界面需要**重绘**或由于某种操作引发**回流**时，该线程就会执行。
@@ -210,8 +210,8 @@ self.addEventListener('fetch', e => {
 
 打开页面，可以在开发者工具中的 Application 看到 Service Worker 已经启动了：
 
-![service-work1](./img/service-work1.png)
+![block2-3](./img/block2-3.png)
 
 在 Cache 中也可以发现所需的文件已被缓存：
 
-![service-work2](./img//service-work2.png)
+![block2-4](./img//block2-4.png)
