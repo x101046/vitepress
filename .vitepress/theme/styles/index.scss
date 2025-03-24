@@ -49,7 +49,7 @@
  :root {
 	--vp-c-indigo-1: #42b883;
 	// --vp-c-text-1: #262626
-	--vp-c-text-2: rgba(60, 60, 60, 0.7);
+	--vp-c-text-2: rgba(114, 114, 114, 0.7);
  }
 
  :root {
@@ -60,7 +60,7 @@
 
   --vp-c-brand-1: var(--vp-c-indigo-1);
   /* --vp-c-brand-1: #42b883; */
-  --vp-c-brand-2: var(--vp-c-indigo-2);
+  --vp-c-brand-2: var(--vp-c-indigo-1);
   --vp-c-brand-3: var(--vp-c-indigo-3);
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 

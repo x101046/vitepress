@@ -11,7 +11,7 @@ aside: left
 }
 </style>
 
-## [Vue3](https://cn.vuejs.org/)
+## [Vue3](https://cn.vuejs.org/)常用
 
 ### 基础库
 
@@ -48,17 +48,14 @@ aside: left
 ## Css && 动画
 
 - [animate.css](https://animate.style/) 最有名的动画效果库
-- [animate.css](https://animate.style/) 简单的补间动画库
-- a
-- a
-- a
-- a
-- a
+- [anime.js](https://animejs.com/documentation/#cssSelector) 一个轻量级的JavaScript动画库，它使用CSS属性和SVG，可以创建平滑的CSS和SVG动画
+- [Web Animations API](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Animations_API) 现代浏览器提供的原生JavaScript动画API，允许开发者以编程方式创建复杂的动画。
+- [Motion](https://motion.dev/) 一个比较好用的动画库。
+- [Motion Vue](https://motion.seacoly.me/) 建立在 Motion 之上的 Vue 动画库。
+- [Tween.js](https://github.com/tweenjs/tween.js) 使用 JavaScript 中的一个简单的补间动画库，支持数字、对象的属性和 CSS 样式属性的赋值。
+- [lottie](https://github.com/airbnb/lottie?tab=readme-ov-file) 主要用法就是UI设计通过专业动画软件设计好之后，输出json文件，然后通过 Lottie 将这些动画无缝地集成到移动app和网页中
 
-## 他
-- asd
-- a
-- a
-- a
-- a
-- a
+
+## 其他
+
+- [Z-Library](https://zh.z-lib.gs/) 一个免费的电子书库，包含了大量的电子书资源。（需科学上网）

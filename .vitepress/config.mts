@@ -50,6 +50,16 @@ export default defineConfig({
 				{ text: 'vue', link: '/frontend/vue' },
 				{ text: '算法', link: '/frontend/algo' }
 			]},
+			{
+				text: '后端',
+				activeMatch: 'backend',
+				items: [{
+					text: 'Node',
+					items: [
+						{ text: 'nestjs', link: '/backend/node/nest/0-介绍/' },
+					]
+				}]
+			},
       { text: 'Q&A', link: '/q&a/html', activeMatch: 'q&a', },
 			{ text: '其他', activeMatch: 'other', items: [
 				{ text: '游戏', link: '/other/game/魔兽/' },
@@ -75,8 +85,16 @@ export default defineConfig({
 					]
 				},
 			],
-			'/frontend/': [
-
+			'/backend/': [
+				{ text: '介绍', link: '/backend/node/nest/0-介绍' },
+				{
+					text: '前置知识',
+					items: [
+						{ text: 'IOC控制反转 DI依赖注入', link: '/backend/node/nest/1-IOC控制反转DI依赖注入' },
+						{ text: '装饰器', link: '/backend/node/nest/2-装饰器' },
+						{ text: 'Nestjs cli', link: '/backend/node/nest/3-nestjs-cli' },
+					]
+				},
 			],
 			'/q&a/': [
 				{ text: 'HTML', link: '/q&a/html/' },
