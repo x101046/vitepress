@@ -15,7 +15,7 @@ aside: left
 
 ### 基础库
 
-- [<img class="icon" src="https://www.vitejs.net/logo.svg"> Vite](https://www.vitejs.net/) -- 下一代前端开发与构建工具。
+- [<img class="icon" src="https://cn.vitejs.dev/logo.svg"> Vite](https://cn.vitejs.dev/) -- 下一代前端开发与构建工具。
 
 - [<img class="icon" src="https://pinia.vuejs.org/logo.svg"> Pinia](https://pinia.vuejs.org/) -- Pinia是一个更简洁的状态管理工具，Vue 2 和 Vue 3都适用。
 

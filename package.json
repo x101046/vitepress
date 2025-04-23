@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "dev": "vitepress dev --port 5170 --host",
+    "dev": "vitepress dev --base /vitepress/ --port 5170 --host --mode development",
     "build": "vitepress build",
-		"deploy": "yarn build && gh-pages -d dist",
+		"build:nas": "vitepress build --base /~wangxi/",
+    "deploy": "vitepress build --base /vitepress/ && gh-pages -d .vitepress/dist",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@css-render/vue3-ssr": "^0.15.14",
+    "gh-pages": "^6.3.0",
     "naive-ui": "^2.40.3",
     "sass": "^1.77.8",
     "vitepress": "^1.2.2"

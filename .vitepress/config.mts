@@ -1,14 +1,17 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
+import logo from "../src/public/img/logo.png";
 
 const fileAndStyles: Record<string, string> = {}
 // const Base = '/~wangxi/'
-const Base = '/'
+// const Base = '/vitepress/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	vite: {
     ssr: {
       noExternal: ['naive-ui', 'date-fns', 'vueuc']
-    }
+    },
+		assetsInclude: ['**/*.png'], // 添加这行
   },
 	postRender(context) {
     const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/
@@ -32,12 +35,13 @@ export default defineConfig({
   },
 	
   title: "My Awesome Project",
-	base: Base,
+	// base: Base,
   lang: 'zh-CN',
   description: "A VitePress Site",
   srcDir: 'src',
 	lastUpdated: true, // 显示上一次更新时间
-	head: [['link', { rel: 'icon', href: `${Base}img/logo.png` }]],
+	// head: [['link', { rel: 'icon', href: `${Base}img/logo.png` }]],
+	head: [['link', { rel: 'icon', href: './img/logo.png' }]],
 	markdown:{
     lineNumbers:true
   },
