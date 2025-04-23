@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "vitepress dev --port 5170 --host",
     "build": "vitepress build",
+		"deploy": "yarn build && gh-pages -d dist",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"

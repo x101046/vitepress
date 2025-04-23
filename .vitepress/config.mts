@@ -1,7 +1,8 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
 
 const fileAndStyles: Record<string, string> = {}
-const Base = '/~wangxi/'
+// const Base = '/~wangxi/'
+const Base = '/'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	vite: {
