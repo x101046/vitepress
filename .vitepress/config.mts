@@ -1,11 +1,9 @@
 import { defineConfig, defineConfigWithTheme } from 'vitepress'
-import logo from "../src/public/img/logo.png";
+
+// const Base = '/~wangxi/'
+const Base = '/vitepress/'
 
 const fileAndStyles: Record<string, string> = {}
-// const Base = '/~wangxi/'
-// const Base = '/vitepress/'
-
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
 	vite: {
     ssr: {
@@ -40,8 +38,8 @@ export default defineConfig({
   description: "A VitePress Site",
   srcDir: 'src',
 	lastUpdated: true, // 显示上一次更新时间
-	// head: [['link', { rel: 'icon', href: `${Base}img/logo.png` }]],
-	head: [['link', { rel: 'icon', href: './img/logo.png' }]],
+	head: [['link', { rel: 'icon', href: `${Base}img/logo.png` }]],
+	// head: [['link', { rel: 'icon', href: './img/logo.png' }]],
 	markdown:{
     lineNumbers:true
   },
